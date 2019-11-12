@@ -1,0 +1,27 @@
+int n, c;
+ФОРМАТ  ПЕРЕМЕННАЯ;
+char line[80];
+bool work;
+clrscr();
+
+work = true;
+n = НОМЕР СТРОКИ;
+c= 0;
+ fr = fopen ("NAME.txt", "rt");  
+
+   while(fgets(line, 80, fr) != NULL && work)
+   {
+         sscanf (line, "%НАИМЕНОВАНИЕ ФОРМАТА", &ПЕРЕМЕННАЯ);
+         if( c==n ){
+               work = false;
+           }else{ c++; }
+ }
+fclose(fr);
+
+ '%lf' : Scan as a double floating-point number.
+ '%Lf' : Scan as a long double floating-point number.
+
+
+ %g', '%G' : Scan a floating-point number in either normal or exponential notation. 
+ '%g' uses lower-case letters and '%G' uses upper-case.
+ double
